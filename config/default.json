@@ -1,0 +1,4 @@
+{
+    "port": 5000,
+    "mongoUrl": "mongodb+srv://mrlearn:root@cluster1.hzupgp5.mongodb.net/?retryWrites=true&w=majority"
+}
