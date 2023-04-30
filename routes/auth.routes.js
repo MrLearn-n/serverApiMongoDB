@@ -1,7 +1,7 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const router = Router();
 
-router.post('/reqistration', async (req, res) => {
+router.post('auth/reqistration', async (req, res) => {
     try {
         const {email, password} = req.body;
 
@@ -12,12 +12,12 @@ router.post('/reqistration', async (req, res) => {
     }
 })
 
-router.post('/login', async (req, res) => {
+router.post('auth/login', async (req, res) => {
     
 })
 
-router.get('/login', (res, req) => {
-    console.log('er')
+router.get('auth/me', (res, req) => {
+    
 })
 
 module.exports = router;
