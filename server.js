@@ -1,11 +1,11 @@
 const express = require('express');
 const config = require('config');
 const mongose = require('mongoose');
-const app = express();
+const server = express();
 
 const PORT = config.get('port') || 5000;
 
-app.use('/api/auth', require('./routes/auth.routes'));
+server.use('/api/auth', require('./routes/auth.routes'));
 
 mongose.set('strictQuery', false)
 
@@ -22,7 +22,7 @@ async function start() {
     }
 }
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server started ${PORT}`);
 })
 
